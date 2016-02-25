@@ -39,7 +39,9 @@ on early-init
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
 on fs
-    wait /dev/block/bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
     mount_all fstab.qcom
     write /proc/sys/vm/swappiness 100
 
