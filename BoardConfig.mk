@@ -179,6 +179,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_cedric
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
 
+# Keymaster
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
