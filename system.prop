@@ -126,6 +126,7 @@ ro.config.hw_volte_on=true
 
 # Media
 media.aac_51_output_enabled=true
+persist.media.treble_omx=false
 mm.enable.qcom_parser=135715
 mm.enable.sec.smoothstreaming=false
 mm.enable.smoothstreaming=false
