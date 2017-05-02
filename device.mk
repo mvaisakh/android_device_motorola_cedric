@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
     camera.msm8937 \
     libbson \
     libshim_camera \
-    Snap
+    SnapdragonCamera
 
 # Camera Configurations
 PRODUCT_COPY_FILES += \
