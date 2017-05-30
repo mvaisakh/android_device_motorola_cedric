@@ -16,14 +16,23 @@
 
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/motorola/cedric/full_cedric.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# for specific
-$(call inherit-product, vendor/motorola/cedric/cedric-vendor.mk)
+# Get the prebuilt list of APNs
+$(call inherit-product, vendor/omni/config/gsm.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# must be before including omni part
+TARGET_BOOTANIMATION_SIZE := 1080x608
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
+# for specific
+$(call inherit-product, device/motorola/cedric/full_cedric.mk)
+$(call inherit-product, vendor/motorola/cedric/cedric-vendor.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -31,6 +40,11 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cedric
-PRODUCT_NAME := lineage_cedric
+PRODUCT_NAME := omni_cedric
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=motorola/cedric/cedric:7.0/NPN25.137-35/37:user/release-keys \
+    PRIVATE_BUILD_DESC="cedric-7.0/NPN25.137-35/37:user/release-keys" \
+    PRODUCT_NAME="Moto G5"
