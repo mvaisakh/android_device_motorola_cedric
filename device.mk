@@ -136,7 +136,6 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl \
     gralloc.msm8937 \
     liboverlay \
-    hwcomposer.msm8937 \
     memtrack.msm8937
 
 # DRM
