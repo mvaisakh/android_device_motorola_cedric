@@ -29,8 +29,12 @@ $(call inherit-product, vendor/deso/common.mk)
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
+# Target Device
+TARGET_DEVICE := cedric
+export TARHET_DEVICE
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cedric
-PRODUCT_NAME := lineage_cedric
+PRODUCT_NAME := deso_cedric
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
