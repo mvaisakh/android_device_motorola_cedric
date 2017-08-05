@@ -106,6 +106,7 @@ persist.ims.vt=false
 persist.ims.vt.epdg=false
 persist.mm.sta.enable=0
 persist.vt.supported=0
+ro.config.hw_volte_on=true
 
 # Media
 media.aac_51_output_enabled=true
