@@ -183,7 +183,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
     libgnsspps \
-    gps.msm8937
+    gps.msm8937 \
+    libshims_get_process_name
 
 # IMS
 PRODUCT_PACKAGES += \
