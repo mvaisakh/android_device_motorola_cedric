@@ -173,7 +173,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+# MUST NOT USE LOCAL_PATH
+BOARD_SEPOLICY_DIRS += \
+    device/motorola/cedric/sepolicy
 
 # Wifi
 WIFI_NEEDS_FST_DRIVER := true
