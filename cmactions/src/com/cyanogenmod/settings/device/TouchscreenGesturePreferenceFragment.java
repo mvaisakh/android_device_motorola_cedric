@@ -43,8 +43,6 @@ public class TouchscreenGesturePreferenceFragment extends PreferenceFragment {
                 if (!mNotificationManager.isNotificationPolicyAccessGranted()) {
                     mFlipPref.setChecked(false);
                     new AlertDialog.Builder(getContext())
-                        .setTitle(getString(R.string.flip_to_mute_title))
-                        .setMessage(getString(R.string.dnd_access))
                         .setNegativeButton(android.R.string.cancel, null)
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
