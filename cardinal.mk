@@ -22,8 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # for specific
 $(call inherit-product, vendor/motorola/cedric/cedric-vendor.mk)
 
-# Inherit some common Desolation stuff.
-$(call inherit-product, vendor/deso/common.mk)
+# Inherit some common Cardinal stuff.
+$(call inherit-product, vendor/cardinal/common.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -31,10 +31,10 @@ TARGET_SCREEN_HEIGHT := 1920
 
 # Target Device
 TARGET_DEVICE := cedric
-export TARHET_DEVICE
+export TARGET_DEVICE
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cedric
-PRODUCT_NAME := deso_cedric
+PRODUCT_NAME := cardinal_cedric
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
