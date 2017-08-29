@@ -316,17 +316,17 @@ service mmi-boot-sh /system/bin/init.mmi.boot.sh
     user root
     oneshot
 
-service mmi-laser-sh /system/bin/init.mmi.laser.sh
-    seclabel u:r:mmi_laser:s0
-    class core
-    user root
-    oneshot
+#service mmi-laser-sh /system/bin/init.mmi.laser.sh
+#    seclabel u:r:mmi_laser:s0
+#    class core
+#    user root
+#    oneshot
 
-service mmi-touch-sh /system/bin/init.mmi.touch.sh
-    seclabel u:r:mmi_touch:s0
-    class core
-    user root
-    oneshot
+#service mmi-touch-sh /system/bin/init.mmi.touch.sh
+#    seclabel u:r:mmi_touch:s0
+#    class core
+#    user root
+#    oneshot
 
 service oem-hw-sh /system/bin/init.oem.hw.sh
     seclabel u:r:oem-hw-sh:s0
