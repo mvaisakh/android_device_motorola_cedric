@@ -304,11 +304,6 @@ service batt_health /system/bin/batt_health
 on property:sys.boot_completed=1 && property:ro.boot.secure_hardware=0
     start batt_health
 
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    user system
-    group input
-
 service mmi-boot-sh /system/bin/init.mmi.boot.sh
     seclabel u:r:mmi_boot:s0
     class core
