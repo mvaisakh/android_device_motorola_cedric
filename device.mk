@@ -112,6 +112,7 @@ PRODUCT_PACKAGES += \
     libbson \
     libshim_camera \
     libshim_buffer \
+    libshim_just \
     Snap
 
 # Camera Configurations
