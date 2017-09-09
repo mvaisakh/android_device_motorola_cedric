@@ -114,9 +114,6 @@ TARGET_CRYPTFS_HW_PATH := $(LOCAL_PATH)/cryptfs_hw
 
 TARGET_PROVIDES_POWERHAL := true
 
-# Disable dex-preoptimization
-WITH_DEXPREOPT := false
-
 # Display
 BOARD_USES_ADRENO := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
