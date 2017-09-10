@@ -22,8 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # for specific
 $(call inherit-product, vendor/motorola/cedric/cedric-vendor.mk)
 
-# Inherit some common Cardinal stuff.
-$(call inherit-product, vendor/cardinal/common.mk)
+# Inherit some common CAF stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -35,6 +35,12 @@ export TARGET_DEVICE
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cedric
-PRODUCT_NAME := cardinal_cedric
+PRODUCT_NAME := aosp_cedric
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
+PRODUCT_MODEL := AOSP on cedric
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=motorola/cedric/cedric:7.0/NPN25.137-35/37:user/release-keys \
+    PRIVATE_BUILD_DESC="cedric-7.0/NPN25.137-35/37:user/release-keys" \
+    PRODUCT_NAME="Moto G5"
