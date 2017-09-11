@@ -171,6 +171,9 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Sap SDK
+USE_PREBUILT_LIBQSAP_SDK := true
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 # MUST NOT USE LOCAL_PATH
