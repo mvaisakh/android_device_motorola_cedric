@@ -132,11 +132,9 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.renderscript@1.0-impl \
     gralloc.msm8937 \
-    copybit.msm8937 \
     liboverlay \
     hwcomposer.msm8937 \
-    memtrack.msm8937 \
-    libtinyxml
+    memtrack.msm8937
 
 # DRM
 PRODUCT_PACKAGES += \
