@@ -31,7 +31,7 @@ TARGET_SCREEN_HEIGHT := 1920
 
 # Target Device
 TARGET_DEVICE := cedric
-export TARHET_DEVICE
+export TARGET_DEVICE
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cedric
