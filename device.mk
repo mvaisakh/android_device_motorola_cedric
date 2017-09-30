@@ -108,13 +108,13 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    camera.msm8937 \
     libbson \
     libshim_camera \
     libshim_buffer \
     libshims_camera \
     libshim_just \
     Snap
+#    camera.msm8937 \
 
 # Camera Configurations
 PRODUCT_COPY_FILES += \
