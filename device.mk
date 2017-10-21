@@ -73,7 +73,7 @@ PRODUCT_PACKAGES += \
 
 # Audio Configurations
 PRODUCT_COPY_FILES += \
-    hardware/qcom/audio-caf/msm8996/configs/msm8937/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
+    hardware/qcom/audio-caf/msm8937/configs/msm8937/audio_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
     $(LOCAL_PATH)/audio/audio_ext_spkr.conf:system/etc/audio_ext_spkr.conf \
@@ -135,6 +135,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.renderscript@1.0-impl \
     gralloc.msm8937 \
+    hwcomposer.msm8937\
     liboverlay \
     memtrack.msm8937
 
@@ -328,17 +329,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     kernel/motorola/msm8937/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
-
-
-#ANT+
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
-
-PRODUCT_PACKAGES += \
-	AntHalService \
-	antradio_app \
-	com.dsi.ant.antradio_library \
-	libantradio
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
