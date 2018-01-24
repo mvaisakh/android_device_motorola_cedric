@@ -58,6 +58,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_CONFIG := normal
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService \
+    antradio_app \
+    libantradio
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm8937 \
