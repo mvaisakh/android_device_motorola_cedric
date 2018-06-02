@@ -113,6 +113,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbson \
     GoogleCameraMod \
+    Camera2 \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl \
@@ -125,9 +126,11 @@ PRODUCT_PACKAGES += \
     camera.msm8937
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/msm8937_mot_camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8937_mot_camera.xml \
+    $(LOCAL_PATH)/configs/camera/msm8937_mot_cedric_camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/msm8937_mot_cedric_camera.xml \
     $(LOCAL_PATH)/configs/camera/mot_ov5695_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mot_ov5695_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/mot_imx258_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mot_imx258_chromatix.xml
+
+#PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/camera/vfwconfig.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vfwconfig.json
 
 # MotoActions
 PRODUCT_PACKAGES += \
