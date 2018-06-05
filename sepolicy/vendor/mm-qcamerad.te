@@ -13,11 +13,11 @@ allow servicemanager mm-qcamerad:dir { search };
 allow servicemanager mm-qcamerad:file { read open };
 allow servicemanager mm-qcamerad:process { getattr };
 
-allow mm-qcamerad camera_data_file:sock_file { create unlink write };
-allow mm-qcamerad system_server:unix_stream_socket rw_socket_perms;
-allow mm-qcamerad sensorservice_service:service_manager find;
+# allow mm-qcamerad camera_data_file:sock_file { create unlink write };
+# allow mm-qcamerad system_server:unix_stream_socket rw_socket_perms;
+#allow mm-qcamerad sensorservice_service:service_manager find;
 allow mm-qcamerad vendor_camera_data_file:file rw_file_perms;
-allow mm-qcamerad permission_service:service_manager find;
+# allow mm-qcamerad permission_service:service_manager find;
 allow mm-qcamerad debug_prop:property_service set;
 allow mm-qcamerad laser_device:chr_file { read write ioctl open };
 allow mm-qcamerad persist_file:dir search;
