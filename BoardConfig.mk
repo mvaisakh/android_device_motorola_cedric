@@ -248,6 +248,9 @@ PRODUCT_USE_VNDK_OVERRIDE := false
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 
+# Thermal
+USE_DEVICE_SPECIFIC_THERMAL := true
+
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
