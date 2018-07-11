@@ -30,8 +30,17 @@ dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 debug.enable.sglscale=1
-sdm.debug.disable_skip_validate=1
 debug.sf.recomputecrop=0
+
+#Disable Skip Validate
+sdm.debug.disable_skip_validate=1
+
+#Property to enable display default color mode
+vendor.display.enable_default_color_mode=1
+
+# Display Properties as per treble compliance
+vendor.gralloc.enable_fb_ubwc=1
+vendor.display.disable_skip_validate=1
 
 #ro.hdmi.enable=true
 #tunnel.decode=true
@@ -77,9 +86,7 @@ persist.timed.enable=true
 
 # System property for cabl
 ro.qualcomm.cabl=2
-
-# Property to enable display default color mode
-vendor.display.enable_default_color_mode=1
+ro.vendor.display.cabl=2
 
 #
 # System props for telephony
@@ -164,11 +171,14 @@ ro.cutoff_voltage_mv=3200
 ro.emmc_size=16GB
 
 #force HAL1 for below packages
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 #properties for limiting preview size in camera
 persist.vendor.camera.display.umax=1920x1080
 persist.vendor.camera.display.lmax=1280x720
+
+#expose aux camera for below packages
+vendor.camera.aux.packagelist=org.codeaurora.snapcam
 
 #set cutoff voltage to 3400mV
 ro.cutoff_voltage_mv=3400
