@@ -1,0 +1,12 @@
+[
+  {
+    "repository" : "Motorola-Common/android_kernel_motorola_msm8953-common",
+    "target_path": "kernel/motorola/msm8937",
+    "branch" : "lineage-15.1-64"
+  },
+  {
+    "repository" : "Motorola-Common/proprietary_vendor_motorola_cedric",
+    "target_path": "vendor/motorola/cedric",
+    "branch" : "lineage-15.1-64"
+  }
+]
