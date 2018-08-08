@@ -63,7 +63,9 @@ else
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x04000000
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-#TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_msm
+TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_msm
+# Enable System As Root even for non-A/B from P onwards
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 endif
 
 ifneq ($(wildcard kernel/msm-3.18),)
@@ -165,7 +167,7 @@ BOARD_VENDOR_KERNEL_MODULES := \
 endif
 
 ifeq ($(strip $(TARGET_KERNEL_VERSION)), 4.9)
-    BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78B0000 androidboot.selinux=permissive firmware_class.path=/vendor/firmware_mnt/image androidboot.usbconfigfs=true
+    BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_serial_dm,0x78B0000 firmware_class.path=/vendor/firmware_mnt/image androidboot.usbconfigfs=true
 else ifeq ($(strip $(TARGET_KERNEL_VERSION)), 3.18)
     BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 firmware_class.path=/vendor/firmware_mnt/image
 endif
@@ -247,4 +249,8 @@ endif
 #Generate DTBO image
 ifeq ($(TARGET_KERNEL_VERSION), 4.9)
 BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_SYSTEMSDK_VERSIONS :=28
+BOARD_VNDK_VERSION := current
 endif
+
+TARGET_ENABLE_MEDIADRM_64 := true
