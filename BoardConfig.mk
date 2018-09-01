@@ -5,7 +5,7 @@
 
 TARGET_BOARD_PLATFORM := msm8937
 # This value will be shown on fastboot menu
-TARGET_BOOTLOADER_BOARD_NAME := QC_Reference_Phone
+TARGET_BOOTLOADER_BOARD_NAME := MSM8937
 
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_APPEND_DTB := true
@@ -29,7 +29,7 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a53
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
@@ -39,14 +39,14 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 #USE_CLANG_PLATFORM_BUILD := true
 TARGET_CPU_CORTEX_A53 := true
 
-TARGET_NO_BOOTLOADER := false
+TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := false
 BOOTLOADER_GCC_VERSION := arm-eabi-4.8
 BOOTLOADER_PLATFORM := msm8952 # use msm8937 LK configuration
 #MALLOC_IMPL := dlmalloc
 MALLOC_SVELTE := true
 
-TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_EXT4 := false
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
 
 ifeq ($(ENABLE_AB),true)
@@ -71,29 +71,29 @@ endif
 ifneq ($(wildcard kernel/msm-3.18),)
     ifeq ($(ENABLE_AB),true)
       ifeq ($(ENABLE_VENDOR_IMAGE), true)
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-3.18/recovery_AB_split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/motorola/cedric/fstabs-3.18/recovery_AB_split_variant.fstab
       else
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-3.18/recovery_AB_non-split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/motorola/cedric/fstabs-3.18/recovery_AB_non-split_variant.fstab
       endif
     else
       ifeq ($(ENABLE_VENDOR_IMAGE), true)
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-3.18/recovery_non-AB_split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/motorola/cedric/fstabs-3.18/recovery_non-AB_split_variant.fstab
       else
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-3.18/recovery_non-AB_non-split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/motorola/cedric/fstabs-3.18/recovery_non-AB_non-split_variant.fstab
       endif
     endif
 else ifneq ($(wildcard kernel/msm-4.9),)
     ifeq ($(ENABLE_AB),true)
       ifeq ($(ENABLE_VENDOR_IMAGE), true)
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_AB_split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/motorola/cedric/fstabs-4.9/recovery_AB_split_variant.fstab
       else
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_AB_non-split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/motorola/cedric/fstabs-4.9/recovery_AB_non-split_variant.fstab
       endif
     else
       ifeq ($(ENABLE_VENDOR_IMAGE), true)
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_non-AB_split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/motorola/cedric/fstabs-4.9/recovery_non-AB_split_variant.fstab
       else
-        TARGET_RECOVERY_FSTAB := device/qcom/msm8937_64/fstabs-4.9/recovery_non-AB_non-split_variant.fstab
+        TARGET_RECOVERY_FSTAB := device/motorola/cedric/fstabs-4.9/recovery_non-AB_non-split_variant.fstab
       endif
     endif
 else
@@ -195,7 +195,7 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 # of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
 
-BOARD_EGL_CFG := device/qcom/msm8937_64/egl.cfg
+BOARD_EGL_CFG := device/motorola/cedric/egl.cfg
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES := true
