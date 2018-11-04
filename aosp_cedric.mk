@@ -23,7 +23,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 $(call inherit-product, device/motorola/cedric/device.mk)
 
 # Inherit some common GZOSP stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+#GAPPs
+TARGET_GAPPS_ARCH := arm64
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -31,7 +34,7 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := cedric
-PRODUCT_NAME : lineage_cedric
+PRODUCT_NAME := aosp_cedric
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 
