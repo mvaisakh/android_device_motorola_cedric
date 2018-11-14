@@ -124,8 +124,8 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/camera/vfwconfig.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vfwconfig.json
 
 # LineageActions
-PRODUCT_PACKAGES += \
-    LineageActions
+#PRODUCT_PACKAGES += \
+#    LineageActions
 
 # Display
 PRODUCT_PACKAGES += \
