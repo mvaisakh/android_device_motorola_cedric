@@ -87,8 +87,9 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := cedric_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8937
 
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-androidkernel-
+#KERNEL_TOOLCHAIN := ./prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-androidkernel-
+TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_USE_SDCLANG := true
 
 # Audio
@@ -210,11 +211,11 @@ LZMA_RAMDISK_TARGETS := recovery
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+#BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
-PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
+#PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
 
 # Sensor
 BOARD_USES_MOT_SENSOR_HUB := true

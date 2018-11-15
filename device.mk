@@ -112,7 +112,6 @@ PRODUCT_PACKAGES += \
     Snap \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
-    android.hardware.camera.provider@2.4-impl \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0_vendor
 
@@ -435,4 +434,4 @@ PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
 
 PRODUCT_VENDOR_MOVE_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
-PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
+#PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
