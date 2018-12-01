@@ -218,8 +218,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Improve Touch HAL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-	device/motorola/cedric/configs/vendor_framework_compatibility_matrix.xml
+#DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+#	device/motorola/cedric/configs/vendor_framework_compatibility_matrix.xml
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
