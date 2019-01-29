@@ -132,9 +132,11 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 # Camera
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/vendor/bin/mm-qcamera-daemon=27
-USE_DEVICE_SPECIFIC_CAMERA := false
+USE_DEVICE_SPECIFIC_CAMERA := true
 USE_CAMERA_STUB := false
 BOARD_QTI_CAMERA_32BIT_ONLY := true
+TARGET_TS_MAKEUP := true
+TARGET_USES_QTI_CAMERA_DEVICE := true
 
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
