@@ -160,6 +160,7 @@ etc/acdbdata/Speaker_cal.acdb
 etc/cacert_location.pem
 -etc/cne/andsfCne.xml
 -etc/cne/SwimConfig.xml
+etc/thermal-engine-cedric.conf:vendor/etc/thermal-engine-cedric.conf
 vendor/etc/msm_irqbalance.conf
 -vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
 -vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml

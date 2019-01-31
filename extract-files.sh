@@ -70,4 +70,8 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
     extract "$MY_DIR"/../$DEVICE/proprietary-files64.txt "$SRC" "$SECTION"
 fi
 
+# Correct thermal config location
+THERENG="$BLOB_ROOT"/vendor/bin/thermal-engine
+sed -i "s|/system/etc/thermal|/vendor/etc/thermal|g" "$THERENG"
+
 "$MY_DIR"/setup-makefiles.sh
