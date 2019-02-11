@@ -340,9 +340,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-common \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
