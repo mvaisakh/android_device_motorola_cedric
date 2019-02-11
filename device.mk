@@ -124,8 +124,8 @@ PRODUCT_PACKAGES += \
     CarrierConfig
 
 # LineageActions
-PRODUCT_PACKAGES += \
-    MotoActions
+#PRODUCT_PACKAGES += \
+#    MotoActions
 
 # Display
 PRODUCT_PACKAGES += \
