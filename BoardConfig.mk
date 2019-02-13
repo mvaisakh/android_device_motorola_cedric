@@ -16,6 +16,8 @@
 
 -include vendor/motorola/cedric/BoardConfigVendor.mk
 
+include vendor/qcom/opensource/core-utils/build/generate_extra_images.mk
+
 DEVICE_PATH := device/motorola/cedric
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
