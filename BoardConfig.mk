@@ -26,6 +26,8 @@ BOARD_VENDOR := motorola-qcom
 
 WITH_LINEAGE_CHARGER := false
 
+TARGET_COPY_OUT_VENDOR := system/vendor
+
 # AIDs and CAPS
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
@@ -86,9 +88,10 @@ TARGET_KERNEL_CONFIG := cedric_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8937
 KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-androidkernel-
+TARGET_KERNEL_VERSION := 3.18
 
 # Audio
-include hardware/qcom/audio/configs/msm8937/msm8937.mk
+#include hardware/qcom/audio/configs/msm8937/msm8937.mk
 AUDIO_FEATURE_ENABLED_ALAC_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_APE_OFFLOAD := true
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true

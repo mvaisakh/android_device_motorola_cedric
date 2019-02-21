@@ -87,6 +87,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl
 
 # Audio Configurations
+include hardware/qcom/audio/configs/msm8937/msm8937.mk
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/vendor/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/audio_ext_spkr.conf:system/vendor/etc/audio_ext_spkr.conf
