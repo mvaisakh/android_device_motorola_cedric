@@ -36,6 +36,8 @@ LOCAL_SRC_FILES :=	\
 		InputEventReader.cpp \
 		NativeSensorManager.cpp
 
+LOCAL_HEADER_LIBRARIES := libutils_headers libhardware_headers
+
 LOCAL_SHARED_LIBRARIES += \
     libc \
     libutils \

@@ -34,6 +34,8 @@ LOCAL_SRC_FILES := \
     SensorBase.cpp \
     ../InputEventReader.cpp
 
+LOCAL_HEADER_LIBRARIES := libutils_headers libhardware_headers
+
 LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/.. \
     system/core/base/include \
