@@ -17,8 +17,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_USE_SHIMS), true)
-
 # ADSP
 include $(CLEAR_VARS)
 LOCAL_C_INCLUDES := external/tinyalsa/include
@@ -26,6 +24,8 @@ LOCAL_SRC_FILES := mixer.c
 LOCAL_MODULE := libshim_adsp
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
+
+ifeq ($(TARGET_USE_SHIMS), true)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := libqsap_shim.c
