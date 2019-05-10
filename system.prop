@@ -307,6 +307,9 @@ ro.usb.bpteth_adb=0x2ee8
 # UI thread scheduling
 sys.use_fifo_ui=1
 
+# Vold - encryption
+persist.vold.ecryptfs_supported=true
+
 # Vendor Extension
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.at_library=libqti-at.so
