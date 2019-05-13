@@ -299,6 +299,9 @@ persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
 
+# Storage
+ro.storaged.event.interval=999999
+
 #Trim properties
 ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
