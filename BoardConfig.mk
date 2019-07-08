@@ -219,7 +219,7 @@ LZMA_RAMDISK_TARGETS := recovery
 TARGET_RIL_VARIANT := caf
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+include device/custom/sepolicy/qcom/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # Sensor
